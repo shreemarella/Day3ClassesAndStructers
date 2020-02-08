@@ -27,7 +27,6 @@ struct SStudent {
         print("Student Name:\(self.studentName)")
         print("Total Marks:\(self.totalMarks)")
     }
-    
-    
+ 
 }
 
