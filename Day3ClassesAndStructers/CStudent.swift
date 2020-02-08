@@ -12,13 +12,44 @@ class CStudent
 {
     var studentId:Int
     var studentName:String
-    var totalMarks:Double
+    var totalMarks:Double?
+    
+    init()
+    {
+        self.studentId = Int()// self is same as this
+        self.studentName = String()
+        self.totalMarks = Double()
+        
+    }
+    
+    init(studentID:Int, studentName:String, totalMarks:Double)
+    {
+        self.studentId = studentID
+        self.studentName = studentName
+        self.totalMarks = totalMarks
+    }
+    
     
     func display()
     {
         print("------Class-------")
-        print("Student ID : \(studentId)")
-        print("Student Name:\(studentName)")
-        print("Total Marks:\(totalMarks)")
+        print("Student ID : \(self.studentId)")
+        print("Student Name: \(self.studentName)")
+        if let t=totalMarks
+        {
+        print("Total Marks: \(t)")
     }
 }
+    deinit {
+        print("deinit() - SStudent")
+        
+        defer {
+            print("Hello")
+            }
+        print("deinit() - Ends")
+            
+        }
+    
+}
+
+

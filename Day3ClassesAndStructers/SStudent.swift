@@ -13,12 +13,21 @@ struct SStudent {
     var studentName:String
     var totalMarks:Double
     
+    init(studentId:Int, studentName:String)
+    {
+        self.studentId = studentId
+        self.studentName = studentName
+        self.totalMarks = 0.0
+    }
+    
     func display()
     {
         print("------Structure-------")
-        print("Student ID : \(studentId)")
-        print("Student Name:\(studentName)")
-        print("Total Marks:\(totalMarks)")
+        print("Student ID : \(self.studentId)")//self is referring to the saame object or same memory object
+        print("Student Name:\(self.studentName)")
+        print("Total Marks:\(self.totalMarks)")
     }
+    
+    
 }
 
